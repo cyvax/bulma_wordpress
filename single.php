@@ -17,14 +17,15 @@ get_header();
                 <?php $posttags = get_the_tags(); ?>
                 <br>
                 <div class="tags are-medium is-justify-content-center is-align-items-center">
-                    <?php foreach($posttags as $tag): ?>
-                    <a href="<?php echo get_tag_link($tag); ?>"><span class="tag is-rounded"><?php echo $tag->name; ?></span></a>
-                    <?php endforeach; ?>
+                    <?php if ($posttags): ?>
+                        <?php foreach($posttags as $tag): ?>
+                        <a href="<?php echo get_tag_link($tag); ?>"><span class="tag is-rounded"><?php echo $tag->name; ?></span></a>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
             </h2>
         </div>
     </section>
-
     <section class="section wh-full" id="#Articles">
         <div class="columns">
             <div class="column">
