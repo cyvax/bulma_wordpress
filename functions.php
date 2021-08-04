@@ -236,6 +236,12 @@ function your_theme_new_customizer_settings($wp_customize) {
 
 add_action('customize_register', 'your_theme_new_customizer_settings');
 
+function br() {
+    echo '<br>';
+}
+
+add_shortcode('br', 'br');
+
 function display_all_posts() {
     $args = array(
         'post_type'=> 'post',
@@ -248,15 +254,17 @@ function display_all_posts() {
     if ($result-> have_posts()) {
         while ($result->have_posts()) {
             $result->the_post();
-            echo '<a class="articles__link" href="<?php esc_url(the_permalink()); ?>">
+            echo '<a class="articles__link" href="';
+            echo esc_url(the_permalink());
+            echo '">
                 <div class="column is-narrow articles">';
-                if (has_post_thumbnail()) {
-                    echo get_the_post_thumbnail("", "", array("class" => "articles__image"));
-                } else {
-                    echo '<img src="https://placekitten.com/g/500/500" class="articles__image" alt="kitten-placeholder">';
-                }
-                echo '
-                    <div class="articles__content">
+            if (has_post_thumbnail()) {
+                echo get_the_post_thumbnail("", "", array("class" => "articles__image"));
+            } else {
+                echo '<img src="https://placekitten.com/g/500/500" class="articles__image" alt="kitten-placeholder">';
+            }
+            echo '
+                    <div class="articles__search">
                         <h5 class="articles__title">' . get_the_title() . '</h5>
                         <p>' . get_the_excerpt() . '</p>
                         <time datetime="' . get_the_time( 'Y-m-d') . '" class="articles__time">

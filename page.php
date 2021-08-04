@@ -12,7 +12,7 @@ get_header();
         </div>
     </section>
 
-    <section class="section wh-full" id="#Articles">
+    <section class="section" id="#Articles">
         <div class="columns">
             <div class="column">
                 <?php the_content(); ?>

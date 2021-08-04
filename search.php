@@ -29,7 +29,7 @@ get_header();
                             <?php else: ?>
                                 <img src="https://placekitten.com/g/500/500" class="articles__image" alt="kitten-placeholder">
                             <?php endif; ?>
-                            <div class="articles__content">
+                            <div class="articles__search">
                                 <h5 class="articles__title"><?php echo get_the_title(); ?></h5>
                                 <p><?php the_excerpt(); ?></p>
                                 <time datetime="<?php the_time( 'Y-m-d'); ?>" class="articles__time">

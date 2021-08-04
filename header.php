@@ -18,7 +18,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 }
 ?>
 <section id="page" class="site">
-    <nav class="navbar pt-3" role="navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'bulma' ); ?>">
+    <nav class="navbar py-3" role="navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'bulma' ); ?>">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="<?php echo get_home_url();?>">

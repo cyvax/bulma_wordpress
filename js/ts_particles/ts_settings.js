@@ -1,5 +1,9 @@
 const options = {
   particles: {
+    fullScreen: {
+      enable: true,
+      zIndex: -1,
+    },
     number: {
       value: 10 ,
       density: {

@@ -21,9 +21,9 @@ if ( post_password_required() ) {
 
 // You can start editing here -- including this comment!
 ?>
-<div id="comments" class="comments-area">
 <?php
 if ( have_comments() ) :?>
+<div id="comments" class="comments-area">
     <h2 class="secondary_title pb-6">Comments</h2>
     <?php the_comments_navigation(); ?>
         <div class="comments_area">
@@ -33,7 +33,7 @@ if ( have_comments() ) :?>
                     <div class="comment__content">
                         <h5><?php echo $comment->comment_author; ?></h5>
                         <p><?php echo $comment->comment_content ?></p>
-                        <time datetime="<?php comment_time( 'Y-m-d' ); ?>" pubdate class="comment__time">
+                        <time datetime="<?php comment_time( 'Y-m-d' ); ?>" class="comment__time">
                             <?php comment_time('d-m-Y'); ?> à <?php comment_time('H:m:s'); ?>
                         </time>
                     </div>
@@ -49,9 +49,6 @@ if ( have_comments() ) :?>
             <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'bulma' ); ?></p>
         <?php
         endif;
-    endif; // Check for have_comments().
-
     comment_form();
-    ?>
-
-</div><!-- #comments -->
+echo '</div><!-- #comments -->';
+endif;
