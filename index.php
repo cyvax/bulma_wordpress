@@ -15,7 +15,7 @@ get_header();
         </div>
     </section>
 
-<section class="section" id="#Articles">
+<section class="section wh-full" id="#Articles">
     <h2 class="secondary_title pb-6">Articles</h2>
     <div class="columns">
         <div class="column">
@@ -29,8 +29,9 @@ get_header();
                     <?php endif; ?>
                     <div class="articles__search">
                         <h5 class="articles__title"><?php echo get_the_title(); ?></h5>
-                        <p><?php the_excerpt(); ?></p>
-                        <time datetime="<?php the_time( 'Y-m-d'); ?>" pubdate class="articles__time">
+                        <p class="hidden_overflow"><?php echo wp_trim_words(get_the_content(), 56); ?><p>
+						<p>lire la suite&#8239;<i class="fas fa-long-arrow-alt-right"></i></p>
+                        <time datetime="<?php the_time( 'Y-m-d'); ?>" pubdate>
                             <?php the_time('d-m-Y'); ?> à <?php the_time('H:m:s'); ?>
                         </time>
                     </div>

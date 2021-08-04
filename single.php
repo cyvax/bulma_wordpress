@@ -26,16 +26,25 @@ get_header();
             </h2>
         </div>
     </section>
-    <section class="section wh-full" id="#Articles">
+    <section class="section" id="#Articles">
         <div class="columns">
             <div class="column">
-                <?php the_content(); ?>
+				<div class="article__content">
+				    <?php the_content(); ?>
+					<div class="next_previous">
+						<div class="site__navigation__prev">
+							<?php previous_post_link( 'Article Précédent<br>%link' ); ?>
+						</div>
+						<div class="site__navigation__next">
+							<?php next_post_link( 'Article Suivant<br>%link' ); ?> 
+						</div>
+					</div>
+				</div>
             </div>
             <?php get_sidebar(); ?>
         </div>
     </section>
-    <section class="section wh-full" id="#Articles">
-
+    <section class="section" id="#Articles">
     <?php
     if ( comments_open() || get_comments_number() ) :
         comments_template();

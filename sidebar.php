@@ -17,7 +17,7 @@
         if ($theme_author && $theme_author_firstname && $theme_author_lastname):
             ?>
             <section class="author_div">
-                <h3 class="tile-subtitle">About Author</h3>
+            <h3 class="tile-subtitle">A Propos de l'auteur</h3>
                 <img src="<?php echo $theme_author ;?>" alt="author's avatar" class="author_avatar">
                 <h4 class="author_name"><?php echo $theme_author_firstname; ?> <?php echo $theme_author_lastname; ?></h4>
                 <p><?php echo $theme_author_description; ?></p>

@@ -237,7 +237,7 @@ function your_theme_new_customizer_settings($wp_customize) {
 add_action('customize_register', 'your_theme_new_customizer_settings');
 
 function br() {
-    echo '<br>';
+    return '<br>';
 }
 
 add_shortcode('br', 'br');
@@ -266,8 +266,8 @@ function display_all_posts() {
             echo '
                     <div class="articles__search">
                         <h5 class="articles__title">' . get_the_title() . '</h5>
-                        <p>' . get_the_excerpt() . '</p>
-                        <time datetime="' . get_the_time( 'Y-m-d') . '" class="articles__time">
+                        <p class="hidden_overflow">' . get_the_excerpt() . '</p>
+                        <time datetime="' . get_the_time( 'Y-m-d') . '">
                             ' .  get_the_time('d-m-Y') . ' à ' . get_the_time('H:m:s') . '
                         </time>
                     </div>

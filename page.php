@@ -15,8 +15,10 @@ get_header();
     <section class="section" id="#Articles">
         <div class="columns">
             <div class="column">
-                <?php the_content(); ?>
-                <?php comments_template( '', true ); ?>
+                <div class="article__content">
+                    <?php the_content(); ?>
+                    <?php comments_template( '', true ); ?>
+                </div>
             </div>
             <?php get_sidebar(); ?>
         </div>
